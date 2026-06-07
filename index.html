@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Neon Budget Tracker ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para sa futuristic gaming look -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="neon-title">⚡ LUCKY BUDGET ⚡</h2>
+        
+        <!-- Dashboard Card na Kumikinang -->
+        <div class="budget-card neon-glow">
+            <h4 class="card-label">TOTAL MYSTERY BALANCE</h4>
+            <h1 id="balance" class="balance-amount">₱0.00</h1>
+            
+            <div class="inc-exp-container">
+                <div class="box inc-box">
+                    <h4>WIN (Income)</h4>
+                    <p id="money-plus" class="money plus">+₱0.00</p>
+                </div>
+                <div class="box exp-box">
+                    <h4>BURN (Expense)</h4>
+                    <p id="money-minus" class="money minus">-₱0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form para sa Input ng Pera -->
+        <div class="form-container">
+            <h3>🎰 SPIN NEW TRANSACTION</h3>
+            <form id="form">
+                <div class="form-control">
+                    <label for="text">🔮 TRANSACTION NAME</label>
+                    <input type="text" id="text" placeholder="e.g., Freebie, Food, Casino Win..." required />
+                </div>
+                <div class="form-control">
+                    <label for="amount">💰 AMOUNT <br><span class="sub-label">(Use [-] to burn cash, [+] to win cash)</span></label>
+                    <input type="number" id="amount" placeholder="e.g., 1000 or -250" required />
+                </div>
+                <button class="btn pulse-btn">🚀 DEPOSIT TO TRACKER</button>
+            </form>
+        </div>
+
+        <!-- History List -->
+        <h3>📜 HISTORY LOG</h3>
+        <ul id="list" class="list">
+            <!-- Dito papasok ang makukulay na cards gamit ang JS -->
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
